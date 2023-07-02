@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Escape the Matrix</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+    }
+    
+    .fade-in {
+      animation: fade 2s ease-in;
+      opacity: 0;
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    
+    .discord-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .discord-button-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      margin-right: 10px;
+    }
+    
+    .discord-button-icon {
+      width: 28px;
+      height: 28px;
+      background-size: cover;
+      filter: grayscale(100%);
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    
+    .discord-button-text {
+      font-size: 18px;
+      color: white;
+    }
+    
+    .view-counter {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    #video-background {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <video id="video-background" autoplay loop>
+    <source src="drake.mp4" type="video/mp4">
+  </video>
+  
+  <div class="view-counter">
+    <span id="counter">0</span> views
+  </div>
+  
+  <h1 class="fade-in">Escape the Matrix</h1>
+  
+  <div class="discord-button">
+    <a class="discord-button-link" href="YOUR_DISCORD_LINK_1" target="_blank">
+      <div class="discord-button-icon" style="background-image: url('https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png');"></div>
+      <span class="discord-button-text"></span>
+    </a>
+    <a class="discord-button-link" href="YOUR_DISCORD_LINK_2" target="_blank">
+      <div class="discord-button-icon" style="background-image: url('https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png');"></div>
+      <span class="discord-button-text"></span>
+    </a>
+    <a class="discord-button-link" href="YOUR_YOUTUBE_LINK" target="_blank">
+      <div class="discord-button-icon" style="background-image: url('https://cdn.iconscout.com/icon/free/png-256/youtube-85-226402.png');"></div>
+      <span class="discord-button-text"></span>
+    </a>
+  </div>
+
+  <script>
+    setTimeout(function(){
+      document.querySelector('.fade-in').style.opacity = 1;
+    }, 1);
+
+    // Update view counter
+    window.onload = function() {
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.pageviews) {
+          localStorage.pageviews = Number(localStorage.pageviews) + 1;
+        } else {
+          localStorage.pageviews = 1;
+        }
+        document.getElementById("counter").textContent = localStorage.pageviews;
+      }
+    };
+  </script>
+</body>
+</html>

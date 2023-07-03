@@ -68,6 +68,28 @@
       position: fixed;
       bottom: 10px;
       right: 10px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .discord-button-icon-bottom-right {
+      width: 28px;
+      height: 28px;
+      background-size: cover;
+      filter: grayscale(100%);
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    
+    .discord-button-text-bottom-right {
+      font-size: 18px;
+      color: white;
+    }
+    
+    .developed-by {
+      font-size: 14px;
+      color: white;
+      margin-right: 5px;
     }
     
     @keyframes fade {
@@ -122,10 +144,6 @@
   </style>
 </head>
 <body>
-  <div class="splash-screen">
-    <div class="splash-screen-text">[Click Me]</div>
-  </div>
-
   <video id="video-background" autoplay loop>
     <source src="drake.mp4" type="video/mp4">
   </video>
@@ -148,8 +166,9 @@
   </div>
 
   <a class="discord-button discord-button-bottom-right" href="https://discord.gg/canary" target="_blank">
-    <div class="discord-button-icon" style="background-image: url('discord.png');"></div>
-    <span class="discord-button-text"></span>
+    <div class="discord-button-icon-bottom-right" style="background-image: url('discord.png');"></div>
+    <span class="discord-button-text-bottom-right"></span>
+    <span class="developed-by">developed by:</span>
   </a>
 
   <script>

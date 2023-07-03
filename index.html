@@ -70,6 +70,12 @@
       right: 10px;
     }
     
+    .small-text {
+      font-size: 14px;
+      color: white;
+      margin-top: 10px;
+    }
+    
     @keyframes fade {
       from {
         opacity: 0;
@@ -98,6 +104,7 @@
       height: 100vh;
       background-color: #000;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 9999;
@@ -109,6 +116,7 @@
       font-size: 28px;
       font-weight: bold;
       color: white;
+      margin-bottom: 10px;
     }
     
     @keyframes fadeOut {
@@ -124,10 +132,11 @@
 <body>
   <div class="splash-screen">
     <div class="splash-screen-text">[Click Me]</div>
+    <div class="small-text">discord.gg/development</div>
   </div>
 
   <video id="video-background" autoplay loop>
-    <source src="drake.mp4" type="video/mp4">
+    <source src="https://cdn.discordapp.com/attachments/1069376288906817657/1125419654148542555/drake.mp4" type="video/mp4">
   </video>
   
   <div class="view-counter">
@@ -138,17 +147,17 @@
   
   <div class="discord-buttons-container">
     <a class="discord-button" href="https://discord.gg/atkrp" target="_blank">
-      <div class="discord-button-icon" style="background-image: url('discord.png');"></div>
+      <div class="discord-button-icon" style="background-image: url('https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png');"></div>
       <span class="discord-button-text"></span>
     </a>
     <a class="discord-button" href="https://discord.gg/atkrz" target="_blank">
-      <div class="discord-button-icon" style="background-image: url('discord.png');"></div>
+      <div class="discord-button-icon" style="background-image: url('https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png');"></div>
       <span class="discord-button-text"></span>
     </a>
   </div>
 
   <a class="discord-button discord-button-bottom-right" href="https://discord.gg/canary" target="_blank">
-    <div class="discord-button-icon" style="background-image: url('discord.png');"></div>
+    <div class="discord-button-icon" style="background-image: url('https://cdn.iconscout.com/icon/free/png-256/discord-3-569463.png');"></div>
     <span class="discord-button-text"></span>
   </a>
 
